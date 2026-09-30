@@ -6,8 +6,10 @@
   "type": "module",
   "scripts": {
     "captures": "node scripts/captures.mjs",
+    "sons": "node --experimental-strip-types --no-warnings scripts/sons.mjs",
     "studio": "remotion studio",
     "storyboard": "node scripts/storyboard.mjs",
+    "rendu": "node --experimental-strip-types --no-warnings scripts/rendu.mjs",
     "images": "node scripts/images-fixes.mjs",
     "typecheck": "tsc --noEmit"
   },

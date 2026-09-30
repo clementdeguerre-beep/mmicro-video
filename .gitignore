@@ -5,3 +5,4 @@ sortie/
 # Images intermédiaires du storyboard (régénérées par npm run storyboard)
 storyboard/images/
 storyboard/*.html
+out-rendu.log

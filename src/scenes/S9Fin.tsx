@@ -18,7 +18,7 @@ export const S9Fin: React.FC = () => {
   const reflet = prog(t, 0.6, 1.2, FLUIDE);
   const peinture = prog(t, 0.95, 0.7, FLUIDE);
   const camera = mix(1.0, 1.03, prog(t, 0, 4, LENT));
-  const fondu = versLaFin(reste, 0.65, FLUIDE); // fondu au noir final
+  const fondu = versLaFin(reste, 0.55, FLUIDE); // fondu au noir final
 
   const largeurLogo = vertical ? 400 : 390;
   const tailleSignature = vertical ? 118 : 104;
@@ -43,9 +43,9 @@ export const S9Fin: React.FC = () => {
         <TexteAuRouleau texte={s2} p={peinture} pGouttes={(t - 0.95) / 0.7} taille={tailleSignature} />
       </MonteeMasquee>
       <div style={{ height: vertical ? 70 : 46 }} />
-      {ligneContact(CONTACT.telephone, 1.05, { fontFamily: TITRE, fontWeight: 700, fontSize: vertical ? 88 : 76, letterSpacing: '-0.02em', color: COULEURS.menthe, fontVariantNumeric: 'tabular-nums', lineHeight: 1.05 })}
-      {ligneContact(CONTACT.site, 1.2, { fontFamily: TEXTE, fontWeight: 500, fontSize: vertical ? 44 : 38, color: COULEURS.blanc, marginTop: 10 })}
-      {ligneContact(CONTACT.zone, 1.35, { fontFamily: TEXTE, fontWeight: 500, fontSize: vertical ? 38 : 32, color: COULEURS.texteSecondaireSombre, marginTop: 4 })}
+      {ligneContact(CONTACT.telephone, 0.9, { fontFamily: TITRE, fontWeight: 700, fontSize: vertical ? 88 : 76, letterSpacing: '-0.02em', color: COULEURS.menthe, fontVariantNumeric: 'tabular-nums', lineHeight: 1.05 })}
+      {ligneContact(CONTACT.site, 1.0, { fontFamily: TEXTE, fontWeight: 500, fontSize: vertical ? 44 : 38, color: COULEURS.blanc, marginTop: 10 })}
+      {ligneContact(CONTACT.zone, 1.1, { fontFamily: TEXTE, fontWeight: 500, fontSize: vertical ? 38 : 32, color: COULEURS.texteSecondaireSombre, marginTop: 4 })}
     </div>
   );
 
@@ -76,7 +76,7 @@ export const S9Fin: React.FC = () => {
       <Son effet="impact-grave" a={0.05} volume={0.8} />
       <Son effet="scintillement" a={0.6} volume={0.35} />
       <Son effet="rouleau" a={0.9} volume={0.45} />
-      <Son effet="souffle-court" a={1.05} volume={0.25} />
+      <Son effet="souffle-court" a={0.9} volume={0.25} />
     </AbsoluteFill>
   );
 };

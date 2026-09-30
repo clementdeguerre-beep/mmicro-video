@@ -95,9 +95,9 @@ export const FILM_9_16 = {
   largeur: 1080,
   hauteur: 1920,
   scenes: [
-    { id: 'logo', duree: 4.5 },
+    { id: 'logo', duree: 5 },
     { id: 'signature', duree: 5 },
-    { id: 'services', duree: 5.5 },
+    { id: 'services', duree: 5 },
     { id: 'rappel', duree: 4.5 },
     { id: 'telephone', duree: 7 },
     { id: 'fin', duree: 4 },
@@ -109,8 +109,12 @@ export const IPS = 60;
 
 /* ---------- Son ---------- */
 export const SON = {
-  // Fichier de musique dans public/audio/ (null = pas de musique)
-  musique: null as string | null,
+  // Musique :
+  //  'originale'  = musique composée pour le film par scripts/sons.mjs,
+  //                 calée sur les scènes (à relancer après un changement de durée)
+  //  'fichier.mp3' = un fichier que vous avez placé dans public/audio/
+  //  null          = pas de musique
+  musique: 'originale' as string | null,
   volumeMusique: 0.55,
   volumeEffets: 0.9,
 };

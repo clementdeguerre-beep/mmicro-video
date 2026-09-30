@@ -6,7 +6,6 @@ import { MotsQuiMontent } from '../composants/Texte';
 import { TEXTE, TITRE } from '../outils/polices';
 import { FLUIDE, LENT, mix, prog, ressort, useTemps, versLaFin } from '../outils/temps';
 import { Son } from '../son/Son';
-import { POINTS_HEXA } from '../composants/Hexa';
 
 /* Scène 5 — Gros plan studio sur le nuancier qui s'ouvre en éventail,
    profondeur de champ marquée ; texte : « Prix annoncé. Prix payé. » */
@@ -32,8 +31,6 @@ export const S5Nuancier: React.FC = () => {
   const entree = prog(t, 0, 0.7, FLUIDE);
   const camera = prog(t, 0, 6, LENT);
   const sortie = versLaFin(reste, 0.6);
-  // Hexagone pétrole qui envahit l'image pour passer à la scène suivante
-  const hexa = versLaFin(reste, 0.55, FLUIDE);
 
   const echelle = vertical ? 3.2 : 3.35;
   const pivot = vertical ? { x: largeur * 0.5, y: hauteur * 0.86 } : { x: largeur * 0.69, y: hauteur * 0.93 };
@@ -118,15 +115,6 @@ export const S5Nuancier: React.FC = () => {
           <MotsQuiMontent texte={ligne2} debut={1.85} taille={vertical ? 118 : 132} couleur={COULEURS.vert} />
         </div>
       </AbsoluteFill>
-
-      {/* Passage à la scène suivante : un hexagone pétrole grandit depuis le centre */}
-      {hexa > 0 ? (
-        <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center' }}>
-          <svg viewBox="0 0 100 116" style={{ width: mix(0, largeur * 2.6, hexa), height: mix(0, largeur * 3.0, hexa), overflow: 'visible' }}>
-            <polygon points={POINTS_HEXA} fill={COULEURS.petrole} stroke={COULEURS.petrole} strokeWidth={12} strokeLinejoin="round" />
-          </svg>
-        </AbsoluteFill>
-      ) : null}
 
       <Finition vignette={0.2} grain={0.045} couleurVignette="13,57,52" />
       <Son effet="souffle" a={0.4} volume={0.45} />

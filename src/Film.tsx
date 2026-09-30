@@ -1,4 +1,5 @@
 import { AbsoluteFill, Html5Audio, Sequence, staticFile } from 'remotion';
+import { APRES, AVANT, Fond, Transition } from './composants/Transition';
 import { COULEURS, FILM_16_9, FILM_9_16, IPS, SON } from './config';
 import './outils/polices';
 import { S1Logo } from './scenes/S1Logo';
@@ -25,6 +26,21 @@ const SCENES: Record<string, React.FC> = {
   fin: S9Fin,
 };
 
+/* Fond de chaque scène : sert à choisir la transition vers la scène suivante */
+const FOND: Record<string, Fond> = {
+  logo: 'noir',
+  signature: 'noir',
+  ordinateur: 'noir',
+  services: 'clair',
+  nuancier: 'clair',
+  rappel: 'petrole',
+  telephone: 'clair',
+  zone: 'sombre',
+  fin: 'noir',
+};
+// Enchaînements qui ont déjà leur propre transition (plongée dans l'écran)
+const SANS_TRANSITION = ['ordinateur>services'];
+
 export const filmDe = (format: Format) => (format === '16x9' ? FILM_16_9 : FILM_9_16);
 
 /** Image de départ de chaque scène */
@@ -40,16 +56,33 @@ export const chronologie = (format: Format) => {
 
 export const dureeTotale = (format: Format) => chronologie(format).reduce((s, x) => s + x.duree, 0);
 
-export const Film: React.FC<{ format: Format; musique?: boolean }> = ({ format, musique = true }) => (
-  <AbsoluteFill style={{ background: COULEURS.noir }}>
-    {chronologie(format).map(({ id, debut, duree }) => {
-      const Scene = SCENES[id];
-      return (
-        <Sequence key={id} from={debut} durationInFrames={duree} name={id} premountFor={30}>
-          <Scene />
-        </Sequence>
-      );
-    })}
-    {musique && SON.musique ? <Html5Audio src={staticFile(`audio/${SON.musique}`)} volume={SON.volumeMusique} /> : null}
-  </AbsoluteFill>
-);
+/** Fichier de musique à jouer (null = sans musique) */
+export const fichierMusique = (format: Format) =>
+  SON.musique === 'originale' ? `audio/musique-${format}.wav` : SON.musique ? `audio/${SON.musique}` : null;
+
+export const Film: React.FC<{ format: Format; musique?: boolean }> = ({ format, musique = true }) => {
+  const scenes = chronologie(format);
+  const fichier = fichierMusique(format);
+  return (
+    <AbsoluteFill style={{ background: COULEURS.noir }}>
+      {scenes.map(({ id, debut, duree }) => {
+        const Scene = SCENES[id];
+        return (
+          <Sequence key={id} from={debut} durationInFrames={duree} name={id} premountFor={30}>
+            <Scene />
+          </Sequence>
+        );
+      })}
+      {scenes.slice(1).map(({ id, debut }, i) => {
+        const avant = scenes[i].id;
+        if (FOND[avant] === FOND[id] || SANS_TRANSITION.includes(`${avant}>${id}`)) return null;
+        return (
+          <Sequence key={`transition-${id}`} from={debut - Math.round(AVANT * IPS)} durationInFrames={Math.round((AVANT + APRES) * IPS)} name={`→ ${id}`}>
+            <Transition vers={FOND[id]} />
+          </Sequence>
+        );
+      })}
+      {musique && fichier ? <Html5Audio src={staticFile(fichier)} volume={SON.volumeMusique} /> : null}
+    </AbsoluteFill>
+  );
+};

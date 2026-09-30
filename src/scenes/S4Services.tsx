@@ -52,10 +52,12 @@ export const S4Services: React.FC = () => {
   const sortie = versLaFin(reste, 0.55);
 
   // ---- Titre : très grand et centré, puis plus petit sur le côté ----
-  const grand = vertical ? 132 : 158;
-  const petit = vertical ? 84 : 80;
-  const echelle = mix(1, petit / grand, deplacement);
   const lignes = [ligne1, ligne2];
+  // Taille « très grand » : la plus longue ligne doit tenir dans 90 % de la largeur
+  const largeurA1px = Math.max(...lignes.map((l) => largeurTexte(l, 100))) / 100;
+  const grand = Math.min(vertical ? 132 : 158, (largeur * 0.9) / largeurA1px);
+  const petit = Math.min(vertical ? 84 : 80, (largeur * (vertical ? 0.86 : 0.42)) / largeurA1px);
+  const echelle = mix(1, petit / grand, deplacement);
   const interligne = grand * 1.02;
   const largeurs = lignes.map((l) => largeurTexte(l, grand));
   // Position de chaque ligne (coin haut gauche, à la taille « grand »)
@@ -72,8 +74,8 @@ export const S4Services: React.FC = () => {
   const cartes = vertical ? GRILLE_MOBILE : GRILLE;
   const lG = vertical ? M.peinture.w * 2 + 16 : E.bento.w;
   const hG = vertical ? Math.max(M.peinture.h + M.petits.h, M.remise.h + M.depannage.h) + 16 : E.bento.h;
-  const eG = vertical ? 1.22 : 0.74;
-  const cxG = vertical ? largeur / 2 : 1385;
+  const eG = vertical ? 1.22 : 0.72;
+  const cxG = vertical ? largeur / 2 : 1365;
   const cyG = vertical ? 1185 : hauteur / 2 + 8;
   const tenue = prog(t, T.cartes + 0.8, 6, LENT); // lente dérive de la caméra
   const rotY = vertical ? mix(7, 3, tenue) : mix(-15, -8, tenue);

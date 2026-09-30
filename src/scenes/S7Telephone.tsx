@@ -8,7 +8,7 @@ import { FondStudioClair } from '../composants/Fonds';
 import { Notification } from '../composants/Notification';
 import { MotsQuiMontent } from '../composants/Texte';
 import { FLUIDE, LENT, mix, prog, ressort, useTemps, versLaFin } from '../outils/temps';
-import { Son } from '../son/Son';
+import { Effet, Son } from '../son/Son';
 import { SCRIPT_FORMULAIRE } from '../composants/EcranFormulaire';
 import { Camera, Studio, useImages, useToile } from '../trois/outils3d';
 import { TEL3D, Telephone3D } from '../trois/Telephone3D';
@@ -47,7 +47,9 @@ export const S7Telephone: React.FC = () => {
   const rotY = mix(-0.95, 0, arrivee) + mix(-0.34, -0.2, derive) + apresSucces * 0.1;
   const rotX = mix(0.35, 0, arrivee) + 0.05;
   const posY = mix(-1.6, 0, arrivee) + Math.sin(t * 1.2) * 0.012;
-  const fraction = vertical ? 0.68 : 0.82; // part de la hauteur de l'image occupée par le téléphone
+  // Part de la hauteur de l'image occupée par le téléphone : léger rapproché pendant la saisie
+  const rapproche = prog(t, debutFormulaire - 0.2, 1.6, FLUIDE) * (1 - prog(t, tSucces - 0.1, 1.0, FLUIDE));
+  const fraction = (vertical ? 0.68 : 0.82) * (1 + 0.1 * rapproche);
   const distance = TEL3D.hauteur / fraction / (2 * Math.tan(THREE.MathUtils.degToRad(CHAMP / 2)));
   const decalageX = vertical ? 0 : -0.38 * (TEL3D.hauteur / fraction) * (largeur / hauteur) * 0.5 * 0.9;
   const decalageY = vertical ? 0.05 : 0;
@@ -146,7 +148,7 @@ export const S7Telephone: React.FC = () => {
       {SCRIPT_FORMULAIRE.filter((s) => 'duree' in s).map((s) =>
         new Array(Math.max(3, Math.round(((s as { duree: number }).duree ?? 0.3) * 14)))
           .fill(0)
-          .map((_, k) => <Son key={`${s.id}-${k}`} effet="frappe" a={debutFormulaire + s.debut / vitesse + k * 0.06} volume={0.2} />),
+          .map((_, k) => <Son key={`${s.id}-${k}`} effet={`frappe-${(k % 3) + 1}` as Effet} a={debutFormulaire + s.debut / vitesse + k * 0.06} volume={0.2} />),
       )}
       {SCRIPT_FORMULAIRE.filter((s) => !('duree' in s) && s.id !== 'succes').map((s) => (
         <Son key={s.id} effet="clic" a={debutFormulaire + s.debut / vitesse} volume={0.5} />
