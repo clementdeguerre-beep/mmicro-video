@@ -1,0 +1,21 @@
+DOSSIER DES PHOTOS
+==================
+
+Déposez ici vos photos au format WebP (conversion gratuite sur squoosh.app).
+Elles s'afficheront une fois la section correspondante activée dans index.html
+(voir README.md, section 6).
+
+Réalisations (portrait, environ 1200 × 1500 px, même cadrage avant et après) :
+  realisation-1-avant.webp   realisation-1-apres.webp
+  realisation-2-avant.webp   realisation-2-apres.webp
+  realisation-3-avant.webp   realisation-3-apres.webp
+
+Photo pleine largeur (paysage, environ 2400 × 1200 px) :
+  bandeau.webp
+
+Idées de photos à prendre sur vos chantiers :
+  - une pièce lumineuse fraîchement repeinte, vue large, sans désordre ;
+  - les protections en place (sols bâchés, meubles couverts, rubans de masquage) ;
+  - un geste net : rouleau sur un mur, découpe au pinceau le long d'une plinthe ;
+  - une paire avant / après d'une remise en état entre deux locataires.
+Évitez les visages reconnaissables sans accord écrit et les marques visibles.

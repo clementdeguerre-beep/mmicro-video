@@ -1,0 +1,1755 @@
+{
+  "genere": "2026-09-30T20:38:24.522Z",
+  "formulaire": {
+    "prenom": "Camille",
+    "nom": "Martin",
+    "telephone": "06 12 34 56 78",
+    "commune": "Castelnau-le-Lez",
+    "besoin": "besoin-peinture",
+    "description": "Salon de 20 m² à repeindre, murs et plafond",
+    "urgence": "urgence-semaine",
+    "echelle": 3,
+    "largeur": 390,
+    "hauteurEcran": 844,
+    "fond": {
+      "fichier": "fond.png",
+      "hauteur": 2274
+    },
+    "rempli": {
+      "fichier": "rempli.png",
+      "hauteur": 2274
+    },
+    "succes": {
+      "fichier": "succes.png",
+      "hauteur": 980,
+      "carte": {
+        "x": 16,
+        "y": 585.3125,
+        "w": 358,
+        "h": 314.625
+      },
+      "icone": {
+        "x": 41,
+        "y": 622.3125,
+        "w": 64,
+        "h": 64
+      },
+      "titre": {
+        "x": 41,
+        "y": 702.3125,
+        "w": 170.921875,
+        "h": 22.25
+      },
+      "texte": "Merci Camille, nous vous rappelons au 06 12 34 56 78 sous 24 h ouvrées."
+    },
+    "entete": {
+      "fichier": "entete.png",
+      "hauteur": 72
+    },
+    "carte": {
+      "x": 16,
+      "y": 585.3125,
+      "w": 358,
+      "h": 1609.078125
+    },
+    "etapes": [
+      {
+        "type": "saisie",
+        "id": "prenom",
+        "valeur": "Camille",
+        "images": [
+          {
+            "fichier": "prenom-00.png",
+            "boite": {
+              "x": 35,
+              "y": 636.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 58,
+              "y": 657.3125,
+              "h": 20
+            },
+            "texte": ""
+          },
+          {
+            "fichier": "prenom-01.png",
+            "boite": {
+              "x": 35,
+              "y": 636.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 71,
+              "y": 657.3125,
+              "h": 20
+            },
+            "texte": "C"
+          },
+          {
+            "fichier": "prenom-02.png",
+            "boite": {
+              "x": 35,
+              "y": 636.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 80,
+              "y": 657.3125,
+              "h": 20
+            },
+            "texte": "Ca"
+          },
+          {
+            "fichier": "prenom-03.png",
+            "boite": {
+              "x": 35,
+              "y": 636.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 96,
+              "y": 657.3125,
+              "h": 20
+            },
+            "texte": "Cam"
+          },
+          {
+            "fichier": "prenom-04.png",
+            "boite": {
+              "x": 35,
+              "y": 636.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 100,
+              "y": 657.3125,
+              "h": 20
+            },
+            "texte": "Cami"
+          },
+          {
+            "fichier": "prenom-05.png",
+            "boite": {
+              "x": 35,
+              "y": 636.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 104,
+              "y": 657.3125,
+              "h": 20
+            },
+            "texte": "Camil"
+          },
+          {
+            "fichier": "prenom-06.png",
+            "boite": {
+              "x": 35,
+              "y": 636.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 108,
+              "y": 657.3125,
+              "h": 20
+            },
+            "texte": "Camill"
+          },
+          {
+            "fichier": "prenom-07.png",
+            "boite": {
+              "x": 35,
+              "y": 636.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 118,
+              "y": 657.3125,
+              "h": 20
+            },
+            "texte": "Camille"
+          },
+          {
+            "fichier": "prenom-fin.png",
+            "boite": {
+              "x": 35,
+              "y": 636.3125,
+              "w": 320,
+              "h": 64
+            },
+            "texte": "Camille",
+            "fin": true
+          }
+        ]
+      },
+      {
+        "type": "saisie",
+        "id": "nom",
+        "valeur": "Martin",
+        "images": [
+          {
+            "fichier": "nom-00.png",
+            "boite": {
+              "x": 35,
+              "y": 742.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 58,
+              "y": 763.3125,
+              "h": 20
+            },
+            "texte": ""
+          },
+          {
+            "fichier": "nom-01.png",
+            "boite": {
+              "x": 35,
+              "y": 742.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 73,
+              "y": 763.3125,
+              "h": 20
+            },
+            "texte": "M"
+          },
+          {
+            "fichier": "nom-02.png",
+            "boite": {
+              "x": 35,
+              "y": 742.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 82,
+              "y": 763.3125,
+              "h": 20
+            },
+            "texte": "Ma"
+          },
+          {
+            "fichier": "nom-03.png",
+            "boite": {
+              "x": 35,
+              "y": 742.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 88,
+              "y": 763.3125,
+              "h": 20
+            },
+            "texte": "Mar"
+          },
+          {
+            "fichier": "nom-04.png",
+            "boite": {
+              "x": 35,
+              "y": 742.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 94,
+              "y": 763.3125,
+              "h": 20
+            },
+            "texte": "Mart"
+          },
+          {
+            "fichier": "nom-05.png",
+            "boite": {
+              "x": 35,
+              "y": 742.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 98,
+              "y": 763.3125,
+              "h": 20
+            },
+            "texte": "Marti"
+          },
+          {
+            "fichier": "nom-06.png",
+            "boite": {
+              "x": 35,
+              "y": 742.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 108,
+              "y": 763.3125,
+              "h": 20
+            },
+            "texte": "Martin"
+          },
+          {
+            "fichier": "nom-fin.png",
+            "boite": {
+              "x": 35,
+              "y": 742.3125,
+              "w": 320,
+              "h": 64
+            },
+            "texte": "Martin",
+            "fin": true
+          }
+        ]
+      },
+      {
+        "type": "saisie",
+        "id": "telephone",
+        "valeur": "06 12 34 56 78",
+        "images": [
+          {
+            "fichier": "telephone-00.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 58,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": ""
+          },
+          {
+            "fichier": "telephone-01.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 69,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "0"
+          },
+          {
+            "fichier": "telephone-02.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 79,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06"
+          },
+          {
+            "fichier": "telephone-03.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 82,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 "
+          },
+          {
+            "fichier": "telephone-04.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 89,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 1"
+          },
+          {
+            "fichier": "telephone-05.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 98,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 12"
+          },
+          {
+            "fichier": "telephone-06.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 101,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 12 "
+          },
+          {
+            "fichier": "telephone-07.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 111,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 12 3"
+          },
+          {
+            "fichier": "telephone-08.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 121,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 12 34"
+          },
+          {
+            "fichier": "telephone-09.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 124,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 12 34 "
+          },
+          {
+            "fichier": "telephone-10.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 134,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 12 34 5"
+          },
+          {
+            "fichier": "telephone-11.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 144,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 12 34 56"
+          },
+          {
+            "fichier": "telephone-12.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 147,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 12 34 56 "
+          },
+          {
+            "fichier": "telephone-13.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 156,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 12 34 56 7"
+          },
+          {
+            "fichier": "telephone-14.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 166,
+              "y": 869.3125,
+              "h": 20
+            },
+            "texte": "06 12 34 56 78"
+          },
+          {
+            "fichier": "telephone-fin.png",
+            "boite": {
+              "x": 35,
+              "y": 848.3125,
+              "w": 320,
+              "h": 64
+            },
+            "texte": "06 12 34 56 78",
+            "fin": true
+          }
+        ]
+      },
+      {
+        "type": "saisie",
+        "id": "commune",
+        "valeur": "Castelnau-le-Lez",
+        "images": [
+          {
+            "fichier": "commune-00.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 58,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": ""
+          },
+          {
+            "fichier": "commune-01.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 71,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "C"
+          },
+          {
+            "fichier": "commune-02.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 80,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Ca"
+          },
+          {
+            "fichier": "commune-03.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 88,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Cas"
+          },
+          {
+            "fichier": "commune-04.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 94,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Cast"
+          },
+          {
+            "fichier": "commune-05.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 104,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Caste"
+          },
+          {
+            "fichier": "commune-06.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 108,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Castel"
+          },
+          {
+            "fichier": "commune-07.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 118,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Casteln"
+          },
+          {
+            "fichier": "commune-08.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 127,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Castelna"
+          },
+          {
+            "fichier": "commune-09.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 137,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Castelnau"
+          },
+          {
+            "fichier": "commune-10.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 145,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Castelnau-"
+          },
+          {
+            "fichier": "commune-11.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 149,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Castelnau-l"
+          },
+          {
+            "fichier": "commune-12.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 159,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Castelnau-le"
+          },
+          {
+            "fichier": "commune-13.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 168,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Castelnau-le-"
+          },
+          {
+            "fichier": "commune-14.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 178,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Castelnau-le-L"
+          },
+          {
+            "fichier": "commune-15.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 187,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Castelnau-le-Le"
+          },
+          {
+            "fichier": "commune-16.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "curseur": {
+              "x": 194,
+              "y": 1081.3125,
+              "h": 20
+            },
+            "texte": "Castelnau-le-Lez"
+          },
+          {
+            "fichier": "commune-fin.png",
+            "boite": {
+              "x": 35,
+              "y": 1060.3125,
+              "w": 320,
+              "h": 64
+            },
+            "texte": "Castelnau-le-Lez",
+            "fin": true
+          }
+        ]
+      },
+      {
+        "type": "saisie",
+        "id": "description",
+        "valeur": "Salon de 20 m² à repeindre, murs et plafond",
+        "images": [
+          {
+            "fichier": "description-00.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 58,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": ""
+          },
+          {
+            "fichier": "description-01.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 68,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "S"
+          },
+          {
+            "fichier": "description-02.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 77,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Sa"
+          },
+          {
+            "fichier": "description-03.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 81,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Sal"
+          },
+          {
+            "fichier": "description-04.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 91,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salo"
+          },
+          {
+            "fichier": "description-05.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 101,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon"
+          },
+          {
+            "fichier": "description-06.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 104,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon "
+          },
+          {
+            "fichier": "description-07.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 114,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon d"
+          },
+          {
+            "fichier": "description-08.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 124,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de"
+          },
+          {
+            "fichier": "description-09.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 127,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de "
+          },
+          {
+            "fichier": "description-10.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 136,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 2"
+          },
+          {
+            "fichier": "description-11.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 147,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20"
+          },
+          {
+            "fichier": "description-12.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 150,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 "
+          },
+          {
+            "fichier": "description-13.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 166,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m"
+          },
+          {
+            "fichier": "description-14.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 172.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m²"
+          },
+          {
+            "fichier": "description-15.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 175.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² "
+          },
+          {
+            "fichier": "description-16.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 184.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à"
+          },
+          {
+            "fichier": "description-17.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 187.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à "
+          },
+          {
+            "fichier": "description-18.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 193.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à r"
+          },
+          {
+            "fichier": "description-19.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 203.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à re"
+          },
+          {
+            "fichier": "description-20.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 213.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à rep"
+          },
+          {
+            "fichier": "description-21.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 223.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repe"
+          },
+          {
+            "fichier": "description-22.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 227.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repei"
+          },
+          {
+            "fichier": "description-23.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 237.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repein"
+          },
+          {
+            "fichier": "description-24.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 247.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeind"
+          },
+          {
+            "fichier": "description-25.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 253.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindr"
+          },
+          {
+            "fichier": "description-26.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 263.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre"
+          },
+          {
+            "fichier": "description-27.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 266.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre,"
+          },
+          {
+            "fichier": "description-28.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 269.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, "
+          },
+          {
+            "fichier": "description-29.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 285.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, m"
+          },
+          {
+            "fichier": "description-30.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 295.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, mu"
+          },
+          {
+            "fichier": "description-31.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 301.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, mur"
+          },
+          {
+            "fichier": "description-32.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 309.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs"
+          },
+          {
+            "fichier": "description-33.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 312.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs "
+          },
+          {
+            "fichier": "description-34.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 322.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs e"
+          },
+          {
+            "fichier": "description-35.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 328.828125,
+              "y": 1463.8125,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs et"
+          },
+          {
+            "fichier": "description-36.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 58,
+              "y": 1487.609375,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs et "
+          },
+          {
+            "fichier": "description-37.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 68,
+              "y": 1487.609375,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs et p"
+          },
+          {
+            "fichier": "description-38.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 72,
+              "y": 1487.609375,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs et pl"
+          },
+          {
+            "fichier": "description-39.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 81,
+              "y": 1487.609375,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs et pla"
+          },
+          {
+            "fichier": "description-40.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 87,
+              "y": 1487.609375,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs et plaf"
+          },
+          {
+            "fichier": "description-41.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 97,
+              "y": 1487.609375,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs et plafo"
+          },
+          {
+            "fichier": "description-42.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 107,
+              "y": 1487.609375,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs et plafon"
+          },
+          {
+            "fichier": "description-43.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "curseur": {
+              "x": 117,
+              "y": 1487.609375,
+              "h": 20
+            },
+            "texte": "Salon de 20 m² à repeindre, murs et plafond"
+          },
+          {
+            "fichier": "description-fin.png",
+            "boite": {
+              "x": 35,
+              "y": 1442.8125,
+              "w": 320,
+              "h": 158.984375
+            },
+            "texte": "Salon de 20 m² à repeindre, murs et plafond",
+            "fin": true
+          }
+        ]
+      },
+      {
+        "type": "choix",
+        "id": "besoin-peinture",
+        "cible": {
+          "x": 41,
+          "y": 1174.3125,
+          "w": 94,
+          "h": 46
+        },
+        "avant": {
+          "fichier": "besoin-avant.png",
+          "boite": {
+            "x": 35,
+            "y": 1168.3125,
+            "w": 320,
+            "h": 166
+          }
+        },
+        "apres": {
+          "fichier": "besoin.png",
+          "boite": {
+            "x": 35,
+            "y": 1168.3125,
+            "w": 320,
+            "h": 166
+          }
+        }
+      },
+      {
+        "type": "choix",
+        "id": "urgence-semaine",
+        "cible": {
+          "x": 131,
+          "y": 1651.796875,
+          "w": 145,
+          "h": 46
+        },
+        "avant": {
+          "fichier": "urgence-avant.png",
+          "boite": {
+            "x": 35,
+            "y": 1645.796875,
+            "w": 320,
+            "h": 112
+          }
+        },
+        "apres": {
+          "fichier": "urgence.png",
+          "boite": {
+            "x": 35,
+            "y": 1645.796875,
+            "w": 320,
+            "h": 112
+          }
+        }
+      },
+      {
+        "type": "case",
+        "id": "consentement",
+        "cible": {
+          "x": 41,
+          "y": 1930.796875,
+          "w": 22,
+          "h": 22
+        },
+        "avant": {
+          "fichier": "consentement-avant.png",
+          "boite": {
+            "x": 35,
+            "y": 1923.796875,
+            "w": 320,
+            "h": 108
+          }
+        },
+        "apres": {
+          "fichier": "consentement.png",
+          "boite": {
+            "x": 35,
+            "y": 1923.796875,
+            "w": 320,
+            "h": 108
+          }
+        }
+      },
+      {
+        "type": "envoi",
+        "bouton": {
+          "x": 41,
+          "y": 2047.796875,
+          "w": 308,
+          "h": 58
+        },
+        "image": {
+          "fichier": "bouton-envoi.png",
+          "boite": {
+            "x": 35,
+            "y": 2041.796875,
+            "w": 320,
+            "h": 70
+          }
+        }
+      }
+    ]
+  },
+  "ordinateur": {
+    "largeur": 1440,
+    "hauteur": 900,
+    "echelle": 2,
+    "defilementHauteur": 2519,
+    "elements": {
+      "titre": {
+        "x": 120,
+        "y": 217.234375,
+        "w": 605.015625,
+        "h": 192
+      },
+      "peint": {
+        "x": 120,
+        "y": 313.234375,
+        "w": 480.203125,
+        "h": 96
+      },
+      "services": {
+        "x": 0,
+        "y": 797,
+        "w": 1440,
+        "h": 1721.625
+      },
+      "bento": {
+        "x": 120,
+        "y": 1255.609375,
+        "w": 1200,
+        "h": 1041.015625
+      },
+      "cartePeinture": {
+        "x": 120,
+        "y": 1255.609375,
+        "w": 693.328125,
+        "h": 589.90625
+      },
+      "carteRemise": {
+        "x": 829.328125,
+        "y": 1255.609375,
+        "w": 490.671875,
+        "h": 589.90625
+      },
+      "cartePetits": {
+        "x": 120,
+        "y": 1861.515625,
+        "w": 490.65625,
+        "h": 435.109375
+      },
+      "carteDepannage": {
+        "x": 626.65625,
+        "y": 1861.515625,
+        "w": 693.34375,
+        "h": 435.109375
+      }
+    }
+  },
+  "cartes": {
+    "peinture": {
+      "w": 693.328125,
+      "h": 589.90625,
+      "hexa": {
+        "x": 41,
+        "y": 41,
+        "w": 52,
+        "h": 60
+      }
+    },
+    "remise": {
+      "w": 490.671875,
+      "h": 589.90625,
+      "hexa": {
+        "x": 41,
+        "y": 41,
+        "w": 52,
+        "h": 60
+      }
+    },
+    "petits": {
+      "w": 490.65625,
+      "h": 435.109375,
+      "hexa": {
+        "x": 41,
+        "y": 41,
+        "w": 52,
+        "h": 60
+      }
+    },
+    "depannage": {
+      "w": 693.34375,
+      "h": 435.109375,
+      "hexa": {
+        "x": 41,
+        "y": 41,
+        "w": 52,
+        "h": 60
+      }
+    }
+  },
+  "cartesMobile": {
+    "peinture": {
+      "w": 358,
+      "h": 583.796875,
+      "hexa": {
+        "x": 27,
+        "y": 27,
+        "w": 52,
+        "h": 60
+      }
+    },
+    "remise": {
+      "w": 358,
+      "h": 573.59375,
+      "hexa": {
+        "x": 27,
+        "y": 27,
+        "w": 52,
+        "h": 60
+      }
+    },
+    "petits": {
+      "w": 358,
+      "h": 418.8125,
+      "hexa": {
+        "x": 27,
+        "y": 27,
+        "w": 52,
+        "h": 60
+      }
+    },
+    "depannage": {
+      "w": 358,
+      "h": 480.1875,
+      "hexa": {
+        "x": 27,
+        "y": 27,
+        "w": 52,
+        "h": 60
+      }
+    }
+  }
+}
