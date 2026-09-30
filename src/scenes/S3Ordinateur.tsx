@@ -24,6 +24,7 @@ const ALLUMAGE = 1.15;
 const PLONGEE = 4.1;
 const ARRIVEE = 6.35; // l'écran remplit l'image
 const DEFILEMENT = 6.55;
+const FONDU_PLEIN = 0.18;
 
 export const S3Ordinateur: React.FC = () => {
   const { t, largeur, hauteur } = useTemps();
@@ -48,11 +49,15 @@ export const S3Ordinateur: React.FC = () => {
   const posA = orbite(cibleA, mix(-40, -14, pA), mix(16, 9, pA), mix(7.6, 6.6, pA));
   const dFinale = DIM.ecranL / (2 * Math.tan(THREE.MathUtils.degToRad(CHAMP / 2)) * (largeur / hauteur));
   const posFinale = ecran.centre.clone().add(ecran.normale.clone().multiplyScalar(dFinale));
-  const pB = prog(t, PLONGEE, ARRIVEE - PLONGEE, (x) => FLUIDE(x) ** 1.15);
+  // La caméra se pose un peu avant la coupe : le fondu se fait sur deux images identiques et immobiles
+  const pB = prog(t, PLONGEE, ARRIVEE - FONDU_PLEIN - PLONGEE, (x) => FLUIDE(x) ** 1.15);
   const position = posA.clone().lerp(posFinale, pB);
   const cible = cibleA.clone().lerp(ecran.centre, Math.min(1, pB * 1.4));
   const haut = new THREE.Vector3(0, 1, 0).lerp(ecran.haut, pB).normalize();
-  const plein = t >= ARRIVEE; // passage à la version plein écran (identique)
+  const plein = t >= ARRIVEE + 0.02; // la 3D s'efface derrière la version plein écran (identique)
+  const DUREE_DEFILEMENT = 1.45;
+  const defilement = DEFILEMENT_SERVICES * prog(t, DEFILEMENT, DUREE_DEFILEMENT, FLUIDE);
+  const vitesseDefilement = Math.abs(defilement - DEFILEMENT_SERVICES * prog(t - 1 / 60, DEFILEMENT, DUREE_DEFILEMENT, FLUIDE)) * (largeur / ECRAN.largeur); // px par image
 
   // Lueur de l'écran projetée à l'image
   const cam = new THREE.PerspectiveCamera(CHAMP, largeur / hauteur, 0.05, 100);
@@ -76,7 +81,7 @@ export const S3Ordinateur: React.FC = () => {
         <Halo x={lueurX} y={lueurY + 8} taille={largeur * 0.5} couleur="204,248,246" opacite={0.13 * allumage} derive={0} graine="s3l" />
       </AbsoluteFill>
 
-      {!images ? null : !plein ? (
+      {!images || plein ? null : (
         <AbsoluteFill style={{ opacity: entree, filter: `blur(${mise_au_point * 14 + flouPlongee}px)` }}>
           <ThreeCanvas
             width={largeur}
@@ -90,14 +95,21 @@ export const S3Ordinateur: React.FC = () => {
             <directionalLight position={[5, 2, -4]} intensity={2.2} color={COULEURS.menthe} />
             <directionalLight position={[-6, 1, -3]} intensity={1.4} color="#27b545" />
             <Camera position={position} cible={cible} haut={haut} champ={CHAMP} />
-            <group position={[0, flottement, 0]} rotation={[0, Math.sin(t * 0.35) * 0.02, 0]}>
+            <group position={[0, flottement * (1 - pB), 0]} rotation={[0, Math.sin(t * 0.35) * 0.02 * (1 - pB), 0]}>
               <Ordinateur3D texture={texture} allumage={allumage} verre={1 - pB} reflet={prog(t, 2.2, 1.6, FLUIDE)} />
             </group>
           </ThreeCanvas>
         </AbsoluteFill>
-      ) : (
-        <SitePleinEcran site={images?.[0] ?? null} defilement={DEFILEMENT_SERVICES * prog(t, DEFILEMENT, 1.35, FLUIDE)} />
       )}
+      {/* Version plein écran : fondu enchaîné très court avec la 3D, puis défilement
+          jusqu'aux Services avec un flou de mouvement proportionnel à la vitesse */}
+      {images && t >= ARRIVEE - FONDU_PLEIN ? (
+        <SitePleinEcran
+          site={images[0]}
+          defilement={defilement}
+          style={{ opacity: prog(t, ARRIVEE - FONDU_PLEIN, FONDU_PLEIN, FLUIDE), filter: vitesseDefilement > 2 ? `blur(${Math.min(6, vitesseDefilement * 0.12)}px)` : undefined }}
+        />
+      ) : null}
 
       <AbsoluteFill style={{ opacity: 1 - pB }}>
         <Finition />

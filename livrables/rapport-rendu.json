@@ -1,0 +1,66 @@
+{
+  "16x9": {
+    "duree": 55,
+    "images": 3300,
+    "melange": {
+      "lufsAvant": -18.18,
+      "gainDb": 4.47,
+      "lufsApres": -14.05,
+      "creteDb": -1.5
+    },
+    "fichiers": {
+      "MMICRO-Multiservices-16x9.mp4": {
+        "taille": "18.5 Mo",
+        "lufs": -14.11,
+        "crete": -1.15,
+        "plage": 6.1
+      },
+      "MMICRO-Multiservices-16x9-sans-musique.mp4": {
+        "taille": "18.4 Mo",
+        "lufs": -16.15,
+        "crete": -1.4,
+        "plage": 11.4
+      }
+    },
+    "poster": {
+      "fichier": "MMICRO-Multiservices-16x9-poster.jpg",
+      "taille": "0.2 Mo"
+    },
+    "calcul": "1505 s"
+  },
+  "9x16": {
+    "duree": 30.5,
+    "images": 1830,
+    "melange": {
+      "lufsAvant": -16.93,
+      "gainDb": 3.14,
+      "lufsApres": -14.04,
+      "creteDb": -1.5
+    },
+    "fichiers": {
+      "MMICRO-Multiservices-9x16.mp4": {
+        "taille": "10.4 Mo",
+        "lufs": -14.16,
+        "crete": -1.3,
+        "plage": 5.5
+      },
+      "MMICRO-Multiservices-9x16-sans-musique.mp4": {
+        "taille": "10.4 Mo",
+        "lufs": -16.68,
+        "crete": -1.46,
+        "plage": 9.1
+      },
+      "MMICRO-Multiservices-9x16-whatsapp.mp4": {
+        "taille": "14.1 Mo",
+        "lufs": -16.18,
+        "crete": -3.39,
+        "plage": 5.5
+      }
+    },
+    "poster": {
+      "fichier": "MMICRO-Multiservices-9x16-poster.jpg",
+      "taille": "0.2 Mo"
+    },
+    "calcul": "894 s"
+  }
+}

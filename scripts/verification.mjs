@@ -41,7 +41,7 @@ const info = ffmpeg(['-i', video]).stderr;
 const ips = Number(/, ([\d.]+) fps/.exec(info)?.[1]);
 const L = format === '9x16' ? 54 : 96;
 const H = format === '9x16' ? 96 : 54;
-const brut = ffmpeg(['-i', video, '-map', '0:v', '-vf', `scale=${L}:${H}`, '-pix_fmt', 'gray', '-f', 'rawvideo', 'pipe:1'], true).stdout;
+const brut = ffmpeg(['-i', video, '-map', '0:v', '-vf', `scale=${L}:${H}`, '-pix_fmt', 'gray', '-c:v', 'rawvideo', '-f', 'image2pipe', 'pipe:1'], true).stdout;
 const taille = L * H;
 const nb = Math.floor(brut.length / taille);
 const ecarts = [];

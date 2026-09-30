@@ -110,7 +110,7 @@ export const S6Rappel: React.FC = () => {
             </div>
           </div>
           <div style={{ marginTop: vertical ? 30 : 10 }}>
-            <MotsQuiMontent texte={sousTitre} debut={2.3} taille={vertical ? 92 : 84} couleur={COULEURS.blanc} graisse={600} interlettrage="-0.03em" />
+            <MotsQuiMontent texte={sousTitre} debut={2.3 * k} taille={vertical ? 92 : 84} couleur={COULEURS.blanc} graisse={600} interlettrage="-0.03em" />
           </div>
           <div
             style={{

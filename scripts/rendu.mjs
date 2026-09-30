@@ -18,7 +18,7 @@ import { renderMedia, renderStill, selectComposition } from '@remotion/renderer'
 import { spawnSync } from 'node:child_process';
 import { crete, ecrireWav, gainEtLimiteur, lireWav, lufs, masteriser } from './lib/audio.mjs';
 import { existsSync } from 'node:fs';
-import { mkdir, rm, stat, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -86,7 +86,7 @@ for (const format of formats) {
     imageFormat: brouillon ? 'jpeg' : 'png',
     jpegQuality: 90,
     scale: brouillon ? 0.5 : 1,
-    concurrency: os.cpus().length,
+    concurrency: Number(process.env.RENDU_PARALLELE) || Math.max(1, Math.min(2, os.cpus().length)), // 2 : évite de saturer la mémoire
     browserExecutable: chrome,
     chromiumOptions,
     onProgress: ({ progress }) => {
@@ -144,7 +144,7 @@ for (const format of formats) {
   ];
   if (format === '9x16') {
     const debit = Math.floor(((14.5 * 8 * 1024) / duree - 160) * 0.97); // kb/s pour rester sous 15 Mo
-    encodages.push({ suffixe: '-whatsapp', source: mix, video: ['-b:v', `${debit}k`, '-maxrate', `${Math.round(debit * 1.5)}k`, '-bufsize', `${debit * 2}k`], audio: '160k' });
+    encodages.push({ suffixe: '-whatsapp', source: mix, filtre: 'volume=-2dB', video: ['-b:v', `${debit}k`, '-maxrate', `${Math.round(debit * 1.5)}k`, '-bufsize', `${debit * 2}k`], audio: '160k' });
   }
   for (const v of encodages) {
     const final = path.join(LIVRABLES, `${NOM}-${format}${v.suffixe}.mp4`);
@@ -155,6 +155,7 @@ for (const format of formats) {
       '-c:v', 'libx264', '-preset', brouillon ? 'veryfast' : 'slow', '-profile:v', 'high', '-pix_fmt', 'yuv420p',
       ...v.video,
       '-g', '120', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709',
+      ...(v.filtre ? ['-af', v.filtre] : []), // l'AAC à bas débit crée de petites crêtes : marge de sécurité
       '-c:a', 'aac', '-b:a', v.audio ?? '256k', '-ar', '48000',
       '-movflags', '+faststart',
       '-metadata', `title=MMICRO Multiservices – Petits travaux. Grand soin.`,
@@ -177,6 +178,9 @@ for (const format of formats) {
   rapport[format].calcul = `${Math.round((Date.now() - debut) / 1000)} s`;
 }
 
-await writeFile(path.join(LIVRABLES, brouillon ? 'rapport-brouillon.json' : 'rapport-rendu.json'), JSON.stringify(rapport, null, 2));
+// Le rapport garde les mesures des formats rendus précédemment
+const fichierRapport = path.join(LIVRABLES, brouillon ? 'rapport-brouillon.json' : 'rapport-rendu.json');
+const ancien = existsSync(fichierRapport) ? JSON.parse(await readFile(fichierRapport, 'utf8')) : {};
+await writeFile(fichierRapport, JSON.stringify({ ...ancien, ...rapport }, null, 2));
 if (!args.includes('--garder')) await rm(TMP, { recursive: true, force: true });
 console.log('\nTerminé.');

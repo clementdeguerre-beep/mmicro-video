@@ -143,6 +143,8 @@ npm run rendu -- 9x16 --brouillon   # aperçu rapide en demi-résolution (dossie
 
 Les fichiers finaux arrivent dans `livrables/`. Au premier rendu, Remotion télécharge un navigateur sans interface ; c'est automatique.
 
+Par défaut, le rendu calcule 2 images à la fois, pour ne pas saturer la mémoire. Sur un ordinateur puissant, vous pouvez accélérer en indiquant plus de calculs en parallèle : `RENDU_PARALLELE=4 npm run rendu`.
+
 Autres commandes :
 
 ```bash
@@ -187,3 +189,47 @@ Voir la partie « Vérifications » en bas de ce fichier (lisibilité, fluidité
 - **Musique et effets sonores** : fabriqués par synthèse pour ce film (`scripts/sons.mjs`). Aucun enregistrement extérieur.
 - **Appareils** : ordinateur portable et smartphone génériques modélisés pour ce film. Aucun logo, son ou élément de marque d'un fabricant.
 - **Données du formulaire** : le prénom et le nom « Camille Martin » sont fictifs. Le téléphone, la description et la commune reprennent les exemples du site. La notification reprend l'objet d'e-mail que produit le formulaire du site : « Nouvelle demande de rappel – [type] – [commune] ».
+
+---
+
+## Vérifications
+
+Mesures faites sur les fichiers livrés (outil : `scripts/verification.mjs`, rapport de volume : `livrables/rapport-rendu.json`).
+
+### Fluidité
+- 60 images par seconde exactement : 3 300 images pour le 16:9 (55 s), 1 830 pour le 9:16 (30,5 s).
+- Les plus grands écarts d'une image à l'autre tombent sur les transitions voulues : hexagones de couleur, éclat du logo, défilement rapide du site après la plongée. Ce défilement reçoit un flou de mouvement proportionnel à sa vitesse.
+- Le passage de l'ordinateur 3D au site en plein écran se fait sur deux images identiques et immobiles : aucun saut.
+- Tous les mouvements suivent des courbes douces ou des ressorts amortis, jamais une vitesse constante.
+
+### Synchronisation du son
+Écart mesuré entre l'attaque de l'effet sonore et le repère visuel :
+
+| Repère | 16:9 | 9:16 |
+|---|---|---|
+| Impact grave quand l'hexagone du logo se remplit | 0 ms | 0 ms |
+| Clic à l'allumage de l'écran de l'ordinateur | 0 ms | (scène absente) |
+| Clic du toucher sur « Envoyer ma demande » | 11 ms (moins d'une image) | 5 ms |
+| Son de validation sur « Demande envoyée. » | 2 ms | 0 ms |
+| Impact du logo de fin | 0 ms | 0 ms |
+
+Les effets sont placés dans chaque scène par rapport à son début. Ils suivent donc automatiquement tout changement de durée.
+
+### Volume
+- Versions avec musique : -14 LUFS, le volume de référence de YouTube, Instagram et TikTok, avec des crêtes sous -1 dB.
+- Versions sans musique : même gain que la version avec musique, donc les effets sonnent exactement pareil (-16 à -17 LUFS).
+- Version WhatsApp : 2 dB plus basse, pour laisser de la marge à la compression audio à bas débit.
+
+### Lisibilité : durée pendant laquelle chaque texte est lisible en entier (minimum demandé : 1,5 s)
+
+| Texte | 16:9 | 9:16 |
+|---|---|---|
+| MMICRO / MULTISERVICES (ouverture) | 1,6 s / 1,5 s (le logo revient à la fin) | idem |
+| Petits travaux. / Grand soin. | 4,5 s / 3,8 s | 3,6 s / 2,8 s |
+| Quatre métiers. / Un seul interlocuteur. | 6,5 s / 5,6 s | 4,2 s / 3,6 s |
+| Prix annoncé. / Prix payé. | 3,9 s / 3,1 s | (scène absente) |
+| 24 h / pour vous rappeler / précision | 3,1 s / 2,6 s / 2,2 s | 2,2 s / 1,8 s / 1,6 s |
+| Décrivez votre besoin. / Nous vous rappelons. | 3,5 s / 2,2 s | 2,7 s / 2,0 s |
+| Notification « Nouvelle demande de rappel… » | 2,0 s | 1,7 s |
+| Montpellier et alentours. (carte) | 2,7 s | (scène absente) |
+| Signature, téléphone, site, zone (fin) | 2,5 s / 1,9 s / 1,8 s / 1,7 s | idem |

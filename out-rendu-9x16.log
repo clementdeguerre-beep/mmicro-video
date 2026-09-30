@@ -1,0 +1,91 @@
+Préparation du projet…
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093019732.03 MB
+Memory reported by /proc/meminfo: 14506.46 MB
+Memory reported by Node: 14506.46 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093019671.20 MB
+Memory reported by /proc/meminfo: 14462.40 MB
+Memory reported by Node: 14462.40 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+
+[9x16] Rendu de 1830 images (30.5 s)…
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093019729.22 MB
+Memory reported by /proc/meminfo: 14413.91 MB
+Memory reported by Node: 14413.91 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093019718.70 MB
+Memory reported by /proc/meminfo: 14413.19 MB
+Memory reported by Node: 14413.19 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+  0 % (0 s)
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093019641.93 MB
+Memory reported by /proc/meminfo: 14411.08 MB
+Memory reported by Node: 14411.08 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093019641.93 MB
+Memory reported by /proc/meminfo: 14411.08 MB
+Memory reported by Node: 14411.08 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+  5 % (20 s)
+  10 % (44 s)
+  15 % (67 s)
+  20 % (90 s)
+  25 % (118 s)
+  30 % (139 s)
+  35 % (162 s)
+  40 % (191 s)
+  45 % (215 s)
+  50 % (238 s)
+  55 % (264 s)
+  60 % (292 s)
+  65 % (377 s)
+  70 % (479 s)
+  75 % (575 s)
+  80 % (667 s)
+[Tab 0, node_modules/three/build/three.module.js:15855] THREE.WebGLRenderer: Context Lost.
+[Tab 1, node_modules/three/build/three.module.js:15855] THREE.WebGLRenderer: Context Lost.
+  85 % (705 s)
+  90 % (721 s)
+  100 % (735 s)
+  → livrables/MMICRO-Multiservices-9x16.mp4 (10.4 Mo, -14.16 LUFS, crête -1.3 dB)
+  → livrables/MMICRO-Multiservices-9x16-sans-musique.mp4 (10.4 Mo, -16.68 LUFS, crête -1.46 dB)
+  → livrables/MMICRO-Multiservices-9x16-whatsapp.mp4 (14.1 Mo, -16.18 LUFS, crête -3.39 dB)
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093020209.13 MB
+Memory reported by /proc/meminfo: 15178.72 MB
+Memory reported by Node: 15178.72 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093020166.29 MB
+Memory reported by /proc/meminfo: 15160.36 MB
+Memory reported by Node: 15160.36 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093020208.84 MB
+Memory reported by /proc/meminfo: 15115.89 MB
+Memory reported by Node: 15115.89 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093020150.80 MB
+Memory reported by /proc/meminfo: 15106.74 MB
+Memory reported by Node: 15106.74 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+  → livrables/MMICRO-Multiservices-9x16-poster.jpg
+
+Terminé.
